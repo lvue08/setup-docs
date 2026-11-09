@@ -186,7 +186,7 @@ The text in the file will be applied as commands in the CLI and become the runni
 End of 2.5 Save Configurations
 
 
-<h1>2.6 Ports and Adresses<h1>
+2.6 Ports and Adresses
 
 The use of IP addresses is the primary means of enabling devices to locate one another and establish end-to-end communication on the internet. Each end device on a network must be configured with an IP address. 
 Examples below this text.
@@ -201,7 +201,7 @@ Examples below this text.
 <ul>
 
 
-<h1>2.6.2 Interfaces and ports<h1>
+2.6.2 Interfaces and ports
 
 Network communications depend on end user device interfaces, networking device interfaces, and the cables that connect them. Each physical interface has specifications, or standards, that define it. A cable connectiong to the interface must be designed to match the physical standards of the interface. Types of network media include twisted-pair copper cables, fiber-optic cables, coaxial cables, or wireless.
 
