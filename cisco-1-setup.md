@@ -38,6 +38,7 @@ To enter line subconfiguration mode use the line command below, followed by the 
 Use the exit command to exit a subuconfiguration mode and return to global configuration mode.
 Switch(config)# line console 0
 Switch(config-line)# exit
+<br>
 Switch(config)#
 
 To move from any subconfiguration mode of the global configuration mode to the mode one step above it in the hierachy modes, enter the exit command.
@@ -110,7 +111,7 @@ Switch# login
 Switch# exit
 Switch#
 
-2.4.4 Encrypt Passwords
+<h1>2.4.4 Encrypt Passwords</h1>
 
 The startup-config and running-config files display most passwaords in plaintext. 
 To encrypt all plaintext passwords, use the<b>service password-encryption<b>global config command.
@@ -152,12 +153,12 @@ To view starup configuration file, use the show startup-config privileged EXEC c
 
 If power to the device is lost, or the device is restarted, all configuration changes will be lost unless they have been saved. To save changes made to the running configuration to the startup configuration file, use the<b>copy running-config startup-config<b>Privileged EXEC mode command.
 
-2.5.2 Alter the Running Configuration
+<h1>2.5.2 Alter the Running Configuration</h1>
 
 If changes are made to the running config do not have the desired effect and the running-config has not yet been saved, you can restore the device to its previous configuration. Remove the changed commands individuall, or reload the device using the<b>reload<b>privileged EXEC mode command to retore the startup-config.
 
 
-2.5.4 Capture Configuration to a Text File
+<h1>2.5.4 Capture Configuration to a Text File</h1>
 
 Configuration files can also be saved and archived to a text document. This sequence of steps ensures that a working copy of the configuration file is available for editing or reuse later.
 
