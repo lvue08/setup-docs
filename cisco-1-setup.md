@@ -76,7 +76,7 @@ Switch# configure terminal
 Switch(config)# hostname (Name of your device)
 Device name(config)#
 
-2.4.3 Configure Passwords
+<h1>2.4.3 Configure Passwords</h1>
 
 To secure user EXEC mode access, enter line console configuration mode using the<b>line console 0<b>global configuration command. The zero is used to represent the first console interface. Next, specify the user EXEC mode password using the<b>password<b>password command. Finall, enable user EXEC access using the<b>login<b>in command.
 
@@ -124,7 +124,7 @@ Use the show running-config command to verify that passwords are now encrypted.
 Switch# end
 Switch# show running-config
 
-2.4.5 Banner messages
+<h1>2.4.5 Banner messages</h1>
 
 To creat a banner message of the day on a network device, use the<b>banner motd #<b>the message of the day # global config command. The "#" in the command syntax is called the demlimiting character can be any charcter as long as it does not occur in the message. For thos reason, symbols such as the "#" are often used. After the command is executer, the banner will be displayed on all subsequent attempts to access the device until the banner is removed.
 
@@ -135,7 +135,7 @@ Switch# banner motd #Authorized Access Only#
 End of Basic device Configuration 2.4
 
 
-Save Configurations 2.5
+<h1>Save Configurations 2.5</h1>
 
 Configuration files 2.5.1
 There are two system files that store the device configuration.
@@ -186,7 +186,7 @@ The text in the file will be applied as commands in the CLI and become the runni
 End of 2.5 Save Configurations
 
 
-2.6 Ports and Adresses
+<h1>2.6 Ports and Adresses<h1>
 
 The use of IP addresses is the primary means of enabling devices to locate one another and establish end-to-end communication on the internet. Each end device on a network must be configured with an IP address. 
 Examples below this text.
@@ -201,7 +201,7 @@ Examples below this text.
 <ul>
 
 
-2.6.2 Interfaces and ports
+<h1>2.6.2 Interfaces and ports<h1>
 
 Network communications depend on end user device interfaces, networking device interfaces, and the cables that connect them. Each physical interface has specifications, or standards, that define it. A cable connectiong to the interface must be designed to match the physical standards of the interface. Types of network media include twisted-pair copper cables, fiber-optic cables, coaxial cables, or wireless.
 
