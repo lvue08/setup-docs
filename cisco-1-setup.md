@@ -10,33 +10,35 @@ This is my first document stored in Git.
 
 <h1>Command notes 2.2. IOS Navigation</h1>
 
-
+<br>
 2.2.2 Configuration Mode and Subconfiguration Modes
 analyst@secOps ~]$ 1s
 Desktop Downloads lab.support.files second_drive
 [analyst@secOps ~]$
-
+<br>
 User EXEC Mode: Switch>
                 Router>
-
+<br>
 Privileged EXEC Mode: Switch#
                       Router#
-
+<br>
 To configure the device, the user must enter global configuration mode, which is commonly called global config mode.
 From global config mode, CLI configuration changes are made that affect the operation of the device as a whole. Global configuration mode is identified by a prompt that ends with (config)# after the device name, such as Switch(config)#.
-
+<br>
 Defult prompt for line configuration mode is Switch(config-line)#
 Defult prompt for interface configuration mode is Switch(config-if)#
 
+<br>
 
 
 
-
-Config commands 2.2.4 Navigate Between IOS Modes
+<h1>Config commands 2.2.4 Navigate Between IOS Modes</h1>
 To enter line subconfiguration mode use the line command below, followed by the management line type and number you wish to access.
 
 Use the exit command to exit a subuconfiguration mode and return to global configuration mode.
+<br>
 Switch(config)# line console 0
+<br>
 Switch(config-line)# exit
 <br>
 Switch(config)#
@@ -65,16 +67,23 @@ The Command Structure 2.3
 Basic Device Configuration 2.4
 
 1.Start with a letter
+<br>
 2.Contain no spaces use dashes -
+<br>
 3.End with a letter or digit
+<br>
 4.Use only letters, digits and dashes
+<br>
 5.Be less than 64 characters in length
 
 When naming convention has been identified, the next step is to use the CLI to apply the names to the devices. From privileged EXEC mode, access the global configuration mode by entering the<b>configure terminal<b>command.
 
 Command hostname: 
+<br>
 Switch# configure terminal
+<br>
 Switch(config)# hostname (Name of your device)
+<br>
 Device name(config)#
 
 <h1>2.4.3 Configure Passwords</h1>
@@ -82,11 +91,17 @@ Device name(config)#
 To secure user EXEC mode access, enter line console configuration mode using the<b>line console 0<b>global configuration command. The zero is used to represent the first console interface. Next, specify the user EXEC mode password using the<b>password<b>password command. Finall, enable user EXEC access using the<b>login<b>in command.
 
 Command Password:
+<br>
 Switch# configure terminal
+<br>
 Switch# line console 0
+<br>
 Switch# password (Your password)
+<br>
 Switch# login
+<br>
 Switch# end
+<br>
 Switch#
 
 Console access will now require a password before allowing access to the user EXEC mode.
@@ -96,8 +111,11 @@ To have administrator access to all IOS commands including configuring a device,
 To secure privileged EXEC access, use the<b>enable secret<b> password global config command, as shown.
 
 Switch# configure terminal
+<br>
 Switch# enable secret class
+<br>
 Switch# exit
+<br>
 Switch#
 
 Virual terminal (VTY) lines enable remote access using Telnet or SSH to the device. Many cisco switches support up to 16 VTY lines that are numbered 0 to 15.
@@ -105,10 +123,15 @@ Virual terminal (VTY) lines enable remote access using Telnet or SSH to the devi
 To secure VTY lines, enter line VTY mode using the<b>ling vty 0 15<b> global config command. Next, specify the VTY password using the password password command. Lastly, enable VTY access using the login command.
 
 Switch# configre terminal
+<br>
 Switch# line vty 0 15
+<br>
 Switch# password cisco
+<br>
 Switch# login
+<br>
 Switch# exit
+<br>
 Switch#
 
 <h1>2.4.4 Encrypt Passwords</h1>
@@ -117,7 +140,9 @@ The startup-config and running-config files display most passwaords in plaintext
 To encrypt all plaintext passwords, use the<b>service password-encryption<b>global config command.
 
 Switch# configure terminal
+<br>
 Switch(config)# service password-encryption
+<br>
 Swtich(config)#
 
 Use the show running-config command to verify that passwords are now encrypted.
@@ -130,11 +155,14 @@ Switch# show running-config
 To creat a banner message of the day on a network device, use the<b>banner motd #<b>the message of the day # global config command. The "#" in the command syntax is called the demlimiting character can be any charcter as long as it does not occur in the message. For thos reason, symbols such as the "#" are often used. After the command is executer, the banner will be displayed on all subsequent attempts to access the device until the banner is removed.
 
 Configure the banner
+<br>
 Switch# configure terminal
+<br>
 Switch# banner motd #Authorized Access Only#
 
-End of Basic device Configuration 2.4
+<h2>End of Basic device Configuration 2.4</h2>
 
+<br>
 
 <h1>Save Configurations 2.5</h1>
 
@@ -184,10 +212,11 @@ Step 2. Copy and pasta the text file into the terminal window connected to the s
 
 The text in the file will be applied as commands in the CLI and become the running configuration on the device.
 
-End of 2.5 Save Configurations
+<h1>End of 2.5 Save Configurations</h2>
 
+<br>
 
-2.6 Ports and Adresses
+<h1>2.6 Ports and Adresses</h1>
 
 The use of IP addresses is the primary means of enabling devices to locate one another and establish end-to-end communication on the internet. Each end device on a network must be configured with an IP address. 
 Examples below this text.
@@ -217,6 +246,7 @@ Different types of network media have different features and benefits. Not all n
 
 A layer 2 switch does not need an IP address. The IP address assigned to the SVI is used to remotely access the switch. An IP address is not necessary for the switch to perform its operations.
 
+Note to not get any random servers <b>no ip domain-lookup<b>
 End of Ports and Addresses 2.6
 
 
